@@ -4,6 +4,16 @@ namespace ConsoleApp1
 {
     class Program
     {
+
+        static public void PlayBackgroundMusic1()
+        {
+            Console.Beep(1320, 500); Console.Beep(990, 250); Console.Beep(1056, 250); Console.Beep(1188, 250); Console.Beep(1320, 125); Console.Beep(1188, 125); Console.Beep(1056, 250); Console.Beep(990, 250); Console.Beep(880, 500); Console.Beep(880, 250); Console.Beep(1056, 250); Console.Beep(1320, 500); Console.Beep(1188, 250); Console.Beep(1056, 250); Console.Beep(990, 750); Console.Beep(1056, 250); Console.Beep(1188, 500); Console.Beep(1320, 500); Console.Beep(1056, 500); Console.Beep(880, 500); Console.Beep(880, 500); System.Threading.Thread.Sleep(250); // Console.Beep(1188, 500); Console.Beep(1408, 250); Console.Beep(1760, 500); Console.Beep(1584, 250); Console.Beep(1408, 250); Console.Beep(1320, 750); Console.Beep(1056, 250); Console.Beep(1320, 500); Console.Beep(1188, 250); Console.Beep(1056, 250); Console.Beep(990, 500); Console.Beep(990, 250); Console.Beep(1056, 250); Console.Beep(1188, 500); Console.Beep(1320, 500); Console.Beep(1056, 500); Console.Beep(880, 500); Console.Beep(880, 500); System.Threading.Thread.Sleep(500);
+        }
+        static public void PlayBackgroundMusic2()
+        {
+            Console.Beep(1188, 500); Console.Beep(1408, 250); Console.Beep(1760, 500); Console.Beep(1584, 250); Console.Beep(1408, 250); Console.Beep(1320, 750); Console.Beep(1056, 250); Console.Beep(1320, 500); Console.Beep(1188, 250); Console.Beep(1056, 250); Console.Beep(990, 500); Console.Beep(990, 250); Console.Beep(1056, 250); Console.Beep(1188, 500); Console.Beep(1320, 500); Console.Beep(1056, 500); Console.Beep(880, 500); Console.Beep(880, 500); System.Threading.Thread.Sleep(500);
+        }
+
         static void Main(string[] args)
         {
             Console.Title = "Math Match!";
@@ -20,8 +30,10 @@ namespace ConsoleApp1
             int num03;
 
             Random rnd = new Random();
-
+            
             Console.WriteLine("Welcome to Math Match! Prepare your mind!");
+
+            PlayBackgroundMusic1();
 
             // First question
 
@@ -33,6 +45,7 @@ namespace ConsoleApp1
             correctAnswer = num01 * num02 + num03;
            
             Console.WriteLine();
+            Console.Beep();
             Console.WriteLine("First question: {0} x {1} + {2}", num01, num02, num03); // Prints questions with variables
             answer = Convert.ToInt32(Console.ReadLine()); // get anwser input
             if (answer == correctAnswer)
@@ -55,6 +68,7 @@ namespace ConsoleApp1
             correctAnswer = num01 * num02 + num03;
 
             Console.WriteLine();
+            Console.Beep();
             Console.WriteLine("Next question: {0} x {1} + {2}", num01, num02, num03);
             answer = Convert.ToInt32(Console.ReadLine());
             if (answer == correctAnswer)
@@ -78,6 +92,7 @@ namespace ConsoleApp1
             correctAnswer = num01 * num02 + num03;
 
             Console.WriteLine();
+            Console.Beep();
             Console.WriteLine("Next question: {0} x {1} + {2}", num01, num02, num03);
             answer = Convert.ToInt32(Console.ReadLine());
             if (answer == correctAnswer)
@@ -101,6 +116,7 @@ namespace ConsoleApp1
             correctAnswer = num01 * num02 + num03;
 
             Console.WriteLine();
+            Console.Beep();
             Console.WriteLine("Next question: {0} x {1} + {2}", num01, num02, num03);
             answer = Convert.ToInt32(Console.ReadLine());
             if (answer == correctAnswer)
@@ -124,6 +140,7 @@ namespace ConsoleApp1
             correctAnswer = num01 * num02 + num03;
 
             Console.WriteLine();
+            Console.Beep();
             Console.WriteLine("Next question: {0} x {1} + {2}", num01, num02, num03);
             answer = Convert.ToInt32(Console.ReadLine());
             if (answer == correctAnswer)
@@ -154,6 +171,9 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Nice Try!");
             }
+            Console.Beep();
+            System.Threading.Thread.Sleep(1000);
+            PlayBackgroundMusic2();
             
 
             // Wait for key press to end
